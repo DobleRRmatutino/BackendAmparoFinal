@@ -22,7 +22,6 @@ public class CORS implements Filter {
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {
 		// TODO Auto-generated method stub
-
 	}
 
 	@Override
@@ -31,7 +30,7 @@ public class CORS implements Filter {
 		HttpServletResponse response = (HttpServletResponse) res;
 		HttpServletRequest request = (HttpServletRequest) req;
 
-		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.setHeader("Access-Control-Allow-Origin", "http://localhost:4200");
 		response.setHeader("Access-Control-Allow-Methods", "DELETE, GET, OPTIONS, PATCH, POST, PUT");
 		response.setHeader("Access-Control-Max-Age", "3600");
 		response.setHeader("Access-Control-Allow-Headers",
@@ -45,7 +44,6 @@ public class CORS implements Filter {
 
 		chain.doFilter(req, res);
 	}
-
 
 	@Override
 	public void destroy() {
