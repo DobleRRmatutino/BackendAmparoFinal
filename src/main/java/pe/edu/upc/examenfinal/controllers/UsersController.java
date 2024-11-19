@@ -30,6 +30,7 @@ public class UsersController {
         return new ResponseEntity<>(responseDto, HttpStatus.CREATED);
     }
 
+
     @GetMapping()
         public ResponseEntity<List<UsersDTO>> list() {
         List<UsersDTO> usersDTOS = usersService.list().stream().map(y -> {
